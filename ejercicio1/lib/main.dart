@@ -28,7 +28,7 @@ class PaginaPrincipal extends StatelessWidget {
     return Scaffold(
 
       appBar: AppBar(
-        title: const Text("Aplicación de Elias"),
+        title: const Text("Aplicación de Elias Wassit"),
         backgroundColor: Colors.redAccent,
       ),
 
