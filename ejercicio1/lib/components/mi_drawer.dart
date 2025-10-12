@@ -3,6 +3,8 @@ import 'package:ejercicio1/screens/pantalla2.dart';
 import 'package:ejercicio1/screens/pantalla3.dart';
 import 'package:ejercicio1/screens/pantalla4.dart';
 import 'package:ejercicio1/screens/pantalla5.dart';
+import 'package:ejercicio1/screens/pantalla6.dart';
+import 'package:ejercicio1/screens/pantalla7.dart';
 import 'package:flutter/material.dart';
 
 class MiDrawer extends StatelessWidget {
@@ -13,7 +15,7 @@ class MiDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
-        children: [
+        children : [
           const DrawerHeader(
             decoration: BoxDecoration(color: Color.fromARGB(255, 194, 77, 77)),
             child: Column(
@@ -93,6 +95,31 @@ class MiDrawer extends StatelessWidget {
             },
           ),
 
+
+          ListTile(
+            leading: const Icon(Icons.edit_note),
+            title: const Text("Texto en filas"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Pantalla6()),
+              );
+            },
+          ),
+
+          ListTile(
+            leading: const Icon(Icons.edit_note),
+            title: const Text("imagenes repetidas"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Pantalla7()),
+              );
+            },
+          ),
+          
         ],
       ),
     );
