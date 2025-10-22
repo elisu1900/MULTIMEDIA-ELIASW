@@ -16,7 +16,7 @@ class MiDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children : [
-          const DrawerHeader(
+          DrawerHeader(
             decoration: BoxDecoration(color: Color.fromARGB(255, 194, 77, 77)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -36,8 +36,8 @@ class MiDrawer extends StatelessWidget {
           ),
 
           ListTile(
-            leading: const Icon(Icons.person),
-            title: const Text("Datos"),
+            leading:  Icon(Icons.person),
+            title:  Text("Datos"),
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
@@ -48,8 +48,8 @@ class MiDrawer extends StatelessWidget {
           ),
 
           ListTile(
-            leading: const Icon(Icons.photo),
-            title: const Text("Foto"),
+            leading:  Icon(Icons.photo),
+            title:  Text("Foto"),
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
@@ -60,8 +60,8 @@ class MiDrawer extends StatelessWidget {
           ),
 
           ListTile(
-            leading: const Icon(Icons.grid_view),
-            title: const Text("Fotos en Columnas"),
+            leading:  Icon(Icons.grid_view),
+            title:  Text("Fotos en Columnas"),
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
@@ -84,8 +84,8 @@ class MiDrawer extends StatelessWidget {
           ),
 
           ListTile(
-            leading: const Icon(Icons.view_column),
-            title: const Text("Imágenes en Columnas"),
+            leading:  Icon(Icons.view_column),
+            title:  Text("Imágenes en Columnas"),
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
@@ -97,8 +97,8 @@ class MiDrawer extends StatelessWidget {
 
 
           ListTile(
-            leading: const Icon(Icons.edit_note),
-            title: const Text("Texto en filas"),
+            leading:  Icon(Icons.edit_note),
+            title:  Text("Texto en filas"),
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
@@ -109,8 +109,8 @@ class MiDrawer extends StatelessWidget {
           ),
 
           ListTile(
-            leading: const Icon(Icons.edit_note),
-            title: const Text("imagenes repetidas"),
+            leading:  Icon(Icons.edit_note),
+            title:  Text("imagenes repetidas"),
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
