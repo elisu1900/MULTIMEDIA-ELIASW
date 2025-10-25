@@ -5,6 +5,8 @@ import 'package:ejercicio1/screens/pantalla4.dart';
 import 'package:ejercicio1/screens/pantalla5.dart';
 import 'package:ejercicio1/screens/pantalla6.dart';
 import 'package:ejercicio1/screens/pantalla7.dart';
+import 'package:ejercicio1/screens/pantalla8.dart';
+import 'package:ejercicio1/screens/pantalla9.dart';
 import 'package:flutter/material.dart';
 
 class MiDrawer extends StatelessWidget {
@@ -109,13 +111,35 @@ class MiDrawer extends StatelessWidget {
           ),
 
           ListTile(
-            leading:  Icon(Icons.edit_note),
+            leading:  Icon(Icons.picture_in_picture),
             title:  Text("imagenes repetidas"),
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const Pantalla7()),
+              );
+            },
+          ),
+          ListTile(
+            leading:  Icon(Icons.image_outlined),
+            title:  Text("imagenes en filas"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Pantalla8()),
+              );
+            },
+          ),
+          ListTile(
+            leading:  Icon(Icons.edit_attributes_outlined),
+            title:  Text("challenge gradiente"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Pantalla9()),
               );
             },
           ),
