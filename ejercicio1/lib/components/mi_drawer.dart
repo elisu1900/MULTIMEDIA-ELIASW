@@ -1,4 +1,6 @@
 import 'package:ejercicio1/screens/pantalla1.dart';
+import 'package:ejercicio1/screens/pantalla10.dart';
+import 'package:ejercicio1/screens/pantalla11.dart';
 import 'package:ejercicio1/screens/pantalla2.dart';
 import 'package:ejercicio1/screens/pantalla3.dart';
 import 'package:ejercicio1/screens/pantalla4.dart';
@@ -140,6 +142,28 @@ class MiDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const Pantalla9()),
+              );
+            },
+          ),
+          ListTile(
+            leading:  Icon(Icons.radio_button_checked),
+            title:  Text("Boton mas menos"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Pantalla10()),
+              );
+            },
+          ),
+          ListTile(
+            leading:  Icon(Icons.camera_alt),
+            title:  Text("Intagram"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Pantalla11()),
               );
             },
           ),

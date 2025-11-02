@@ -19,7 +19,7 @@ class Pantalla9 extends StatelessWidget {
         begin: Alignment.bottomLeft,
         end: Alignment.topRight,
         colors: [
-          Color(0xFFFBA3660),
+          Color(0xFFFBA366),
           Color(0xFF1C256E),
         ],
         stops: [0.3, 0.75],
