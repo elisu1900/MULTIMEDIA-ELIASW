@@ -1,14 +1,5 @@
-import 'package:ejercicio1/screens/pantalla1.dart';
-import 'package:ejercicio1/screens/pantalla10.dart';
-import 'package:ejercicio1/screens/pantalla11.dart';
-import 'package:ejercicio1/screens/pantalla2.dart';
-import 'package:ejercicio1/screens/pantalla3.dart';
-import 'package:ejercicio1/screens/pantalla4.dart';
-import 'package:ejercicio1/screens/pantalla5.dart';
-import 'package:ejercicio1/screens/pantalla6.dart';
-import 'package:ejercicio1/screens/pantalla7.dart';
-import 'package:ejercicio1/screens/pantalla8.dart';
-import 'package:ejercicio1/screens/pantalla9.dart';
+import 'package:ejercicio1/routes/app_routes.dart';
+
 import 'package:flutter/material.dart';
 
 class MiDrawer extends StatelessWidget {
@@ -44,9 +35,9 @@ class MiDrawer extends StatelessWidget {
             title:  Text("Datos"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla1()),
+                AppRoutes.pantalla1,
               );
             },
           ),
@@ -56,9 +47,9 @@ class MiDrawer extends StatelessWidget {
             title:  Text("Foto"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla2()),
+                AppRoutes.pantalla2,
               );
             },
           ),
@@ -68,9 +59,9 @@ class MiDrawer extends StatelessWidget {
             title:  Text("Fotos en Columnas"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla3()),
+                AppRoutes.pantalla3,
               );
             },
           ),
@@ -80,9 +71,9 @@ class MiDrawer extends StatelessWidget {
             title: const Text("Iconos en Filas"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla4()),
+                AppRoutes.pantalla4,
               );
             },
           ),
@@ -92,9 +83,9 @@ class MiDrawer extends StatelessWidget {
             title:  Text("Imágenes en Columnas"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla5()),
+                AppRoutes.pantalla5,
               );
             },
           ),
@@ -105,9 +96,9 @@ class MiDrawer extends StatelessWidget {
             title:  Text("Texto en filas"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla6()),
+                AppRoutes.pantalla6,
               );
             },
           ),
@@ -117,9 +108,9 @@ class MiDrawer extends StatelessWidget {
             title:  Text("imagenes repetidas"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla7()),
+                AppRoutes.pantalla7,
               );
             },
           ),
@@ -128,9 +119,9 @@ class MiDrawer extends StatelessWidget {
             title:  Text("imagenes en filas"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla8()),
+                AppRoutes.pantalla8,
               );
             },
           ),
@@ -139,9 +130,9 @@ class MiDrawer extends StatelessWidget {
             title:  Text("challenge gradiente"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla9()),
+                AppRoutes.pantalla9,
               );
             },
           ),
@@ -150,9 +141,9 @@ class MiDrawer extends StatelessWidget {
             title:  Text("Boton mas menos"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla10()),
+                AppRoutes.pantalla10,
               );
             },
           ),
@@ -161,9 +152,20 @@ class MiDrawer extends StatelessWidget {
             title:  Text("Intagram"),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(builder: (context) => const Pantalla11()),
+                AppRoutes.pantalla11,
+              );
+            },
+          ),
+          ListTile(
+            leading:  Icon(Icons.camera_alt),
+            title:  Text("contador de Clics"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(
+                context,
+                AppRoutes.pantalla12,
               );
             },
           ),
