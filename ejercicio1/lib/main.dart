@@ -1,4 +1,5 @@
 import 'package:ejercicio1/components/mi_drawer.dart';
+import 'package:ejercicio1/routes/app_routes.dart'; // ✅ Importa AppRoutes
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class MainApp extends StatelessWidget {
       title: "Actividad 1",
       theme: ThemeData(primarySwatch: Colors.red),
       home: const PaginaPrincipal(),
+      routes: AppRoutes.getRoutes(), // ✅ Registra las rutas aquí
       debugShowCheckedModeBanner: false,
     );
   }
@@ -24,19 +26,16 @@ class PaginaPrincipal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-
       appBar: AppBar(
         title: const Text("Aplicación de Elias Wassit"),
         backgroundColor: Colors.redAccent,
       ),
-
       drawer: const MiDrawer(),
-
       body: const Center(
-        child: Text("abre el menu drawer",
-        style: TextStyle(fontSize: 20)
+        child: Text(
+          "abre el menu drawer",
+          style: TextStyle(fontSize: 20)
         ),
       ),
     );

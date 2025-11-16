@@ -15,7 +15,7 @@ import '../screens/pantalla12.dart';
 
 class AppRoutes {
   // Nombres de las rutas
-  static const String pantalla1 = '/pantalla1';
+  static const String pantalla1 = '/pantalla1';   // ✅ Sin ./screen/
   static const String pantalla2 = '/pantalla2';
   static const String pantalla3 = '/pantalla3';
   static const String pantalla4 = '/pantalla4';

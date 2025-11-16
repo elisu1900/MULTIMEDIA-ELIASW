@@ -33,14 +33,14 @@ class MiDrawer extends StatelessWidget {
           ListTile(
             leading:  Icon(Icons.person),
             title:  Text("Datos"),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.pushNamed(
-                context,
-                AppRoutes.pantalla1,
-              );
-            },
-          ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(
+                  context,
+                  AppRoutes.pantalla1,
+                );
+              },
+            ),
 
           ListTile(
             leading:  Icon(Icons.photo),
