@@ -159,8 +159,8 @@ class MiDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading:  Icon(Icons.camera_alt),
-            title:  Text("contador de Clics"),
+            leading:  Icon(Icons.play_arrow),
+            title:  Text("Juego colores"),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(

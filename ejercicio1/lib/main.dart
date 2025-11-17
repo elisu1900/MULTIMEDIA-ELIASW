@@ -1,5 +1,5 @@
 import 'package:ejercicio1/components/mi_drawer.dart';
-import 'package:ejercicio1/routes/app_routes.dart'; // ✅ Importa AppRoutes
+import 'package:ejercicio1/routes/app_routes.dart'; 
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
       title: "Actividad 1",
       theme: ThemeData(primarySwatch: Colors.red),
       home: const PaginaPrincipal(),
-      routes: AppRoutes.getRoutes(), // ✅ Registra las rutas aquí
+      routes: AppRoutes.getRoutes(), 
       debugShowCheckedModeBanner: false,
     );
   }

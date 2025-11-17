@@ -14,8 +14,7 @@ import '../screens/pantalla11.dart';
 import '../screens/pantalla12.dart';
 
 class AppRoutes {
-  // Nombres de las rutas
-  static const String pantalla1 = '/pantalla1';   // ✅ Sin ./screen/
+  static const String pantalla1 = '/pantalla1';
   static const String pantalla2 = '/pantalla2';
   static const String pantalla3 = '/pantalla3';
   static const String pantalla4 = '/pantalla4';
@@ -27,7 +26,7 @@ class AppRoutes {
   static const String pantalla10 = '/pantalla10';
   static const String pantalla11 = '/pantalla11';
   static const String pantalla12 = '/pantalla12';
-  
+
   // Mapa de rutas
   static Map<String, WidgetBuilder> getRoutes() {
     return {

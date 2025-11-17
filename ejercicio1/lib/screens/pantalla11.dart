@@ -1,3 +1,4 @@
+import 'package:ejercicio1/components/mi_drawer.dart';
 import 'package:flutter/material.dart';
 
 class Pantalla11 extends StatelessWidget {
@@ -7,13 +8,10 @@ class Pantalla11 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      drawer: const MiDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {},
-        ),
         title: const Row(
           children: [
             Text(
