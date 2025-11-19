@@ -12,6 +12,7 @@ import '../screens/pantalla9.dart';
 import '../screens/pantalla10.dart';
 import '../screens/pantalla11.dart';
 import '../screens/pantalla12.dart';
+import '../screens/pantalla13.dart';
 
 class AppRoutes {
   static const String pantalla1 = '/pantalla1';
@@ -26,6 +27,7 @@ class AppRoutes {
   static const String pantalla10 = '/pantalla10';
   static const String pantalla11 = '/pantalla11';
   static const String pantalla12 = '/pantalla12';
+  static const String pantalla13 = '/pantalla13';
 
   // Mapa de rutas
   static Map<String, WidgetBuilder> getRoutes() {
@@ -42,6 +44,7 @@ class AppRoutes {
       pantalla10: (context) => const Pantalla10(),
       pantalla11: (context) => const Pantalla11(),
       pantalla12: (context) => const Pantalla12(),
+      pantalla13: (context) => const Pantalla13(),
     };
   }
 }

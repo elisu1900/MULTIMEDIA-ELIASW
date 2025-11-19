@@ -159,7 +159,7 @@ class MiDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading:  Icon(Icons.play_arrow),
+            leading:  Icon(Icons.casino),
             title:  Text("Juego colores"),
             onTap: () {
               Navigator.pop(context);
@@ -170,6 +170,17 @@ class MiDrawer extends StatelessWidget {
             },
           ),
           
+          ListTile(
+            leading:  Icon(Icons.videogame_asset),
+            title:  Text("Juego de Imagenes"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(
+                context,
+                AppRoutes.pantalla13,
+              );
+            },
+          ),
         ],
       ),
     );
