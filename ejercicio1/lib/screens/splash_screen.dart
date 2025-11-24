@@ -1,31 +1,39 @@
 import 'package:ejercicio1/main.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashTransition extends StatefulWidget {
+  const SplashTransition({super.key});
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  State<SplashTransition> createState() => _SplashTransitionState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashTransitionState extends State<SplashTransition> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => PaginaPrincipal()),
-      );
+    Future.delayed(Duration(milliseconds: 1500), () {
+      if (mounted) {
+        Navigator.pushReplacement(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => PaginaPrincipal(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(opacity: animation, child: child);
+            },
+            transitionDuration: Duration(milliseconds: 500),
+          ),
+        );
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       body: Center(
-        child: Text('Mi App', style: TextStyle(fontSize: 32, color: Colors.white)),
+        child: Image.asset('assets/logo.png', width: 150),
       ),
     );
   }

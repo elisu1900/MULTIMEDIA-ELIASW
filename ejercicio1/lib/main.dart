@@ -1,5 +1,6 @@
 import 'package:ejercicio1/components/mi_drawer.dart';
-import 'package:ejercicio1/routes/app_routes.dart'; 
+import 'package:ejercicio1/routes/app_routes.dart';
+import 'package:ejercicio1/screens/splash_screen.dart'; 
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: "Actividad 1",
       theme: ThemeData(primarySwatch: Colors.red),
-      home: const PaginaPrincipal(),
+      home: SplashTransition(),
       routes: AppRoutes.getRoutes(), 
       debugShowCheckedModeBanner: false,
     );
