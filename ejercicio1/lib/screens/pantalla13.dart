@@ -18,10 +18,10 @@ class _Pantalla13State extends State<Pantalla13> {
   Timer? temporizador;
   final Random random = Random();
 
-  // Duración en segundos que la imagen está visible
+  // Duración de imagen visible
   final int duracionImagen = 1000;
 
-  // Tamaño de la imagen/icono
+  // Tamaño de la imagen
   final double sizeImagen = 80;
 
   @override
@@ -38,16 +38,13 @@ class _Pantalla13State extends State<Pantalla13> {
     setState(() {
       mostrarImagen = true;
       // Generar posición aleatoria (dejando margen para que no se salga)
-      posicionX = random.nextDouble() * 0.7 + 0.1; // Entre 10% y 80% del ancho
-      posicionY = random.nextDouble() * 0.6 + 0.15; // Entre 15% y 75% del alto
+      posicionX = random.nextDouble() * 0.7 + 0.1; 
+      posicionY = random.nextDouble() * 0.6 + 0.15; 
     });
 
-    // Cancelar temporizador anterior si existe
     temporizador?.cancel();
 
-    // Crear nuevo temporizador
     temporizador = Timer(Duration(milliseconds: duracionImagen), () {
-      // Si no se pulsó la imagen, restar 2 puntos
       if (mounted && mostrarImagen) {
         setState(() {
           if (puntuacion >= 2) {
@@ -58,7 +55,6 @@ class _Pantalla13State extends State<Pantalla13> {
           mostrarImagen = false;
         });
 
-        // Esperar un momento antes de mostrar la siguiente imagen
         Future.delayed(const Duration(milliseconds: 500), () {
           if (mounted) {
             generarNuevaPosicion();
@@ -75,7 +71,6 @@ class _Pantalla13State extends State<Pantalla13> {
       mostrarImagen = false;
     });
 
-    // Esperar un momento antes de mostrar la siguiente imagen
     Future.delayed(const Duration(milliseconds: 500), () {
       if (mounted) {
         generarNuevaPosicion();
@@ -113,10 +108,8 @@ class _Pantalla13State extends State<Pantalla13> {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          // Fondo
           Container(decoration: BoxDecoration(color: Colors.white)),
 
-          // Puntuación
           Positioned(
             top: 20,
             left: 0,
@@ -148,7 +141,6 @@ class _Pantalla13State extends State<Pantalla13> {
             ),
           ),
 
-          // Imagen/Icono en posición aleatoria
           if (mostrarImagen)
             Positioned(
               left: MediaQuery.of(context).size.width * posicionX,

@@ -36,10 +36,10 @@ class AppThemes {
     primaryColor: Colors.red[900],
     scaffoldBackgroundColor: const Color(0xFF121212),
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.red[900],
-      foregroundColor: Colors.white,
+      backgroundColor: const Color.fromARGB(255, 106, 13, 13),
+      foregroundColor: const Color.fromARGB(255, 155, 155, 155),
       elevation: 4,
-      iconTheme: const IconThemeData(color: Colors.white),
+      iconTheme: const IconThemeData(color: Color.fromARGB(255, 0, 0, 0)),
     ),
     textTheme: TextTheme(
       displayLarge: GoogleFonts.caveat(
