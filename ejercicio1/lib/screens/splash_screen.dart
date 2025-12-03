@@ -21,7 +21,7 @@ class _SplashTransitionState extends State<SplashTransition> {
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(opacity: animation, child: child);
             },
-            transitionDuration: Duration(milliseconds: 500),
+            // transitionDuration: Duration(milliseconds: 200),
           ),
         );
       }

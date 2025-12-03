@@ -181,6 +181,17 @@ class MiDrawer extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            leading:  Icon(Icons.videogame_asset),
+            title:  Text("Juego del numero"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(
+                context,
+                AppRoutes.pantalla14,
+              );
+            },
+          ),
         ],
       ),
     );

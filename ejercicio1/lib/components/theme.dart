@@ -35,21 +35,21 @@ class AppThemes {
     brightness: Brightness.dark,
     primaryColor: Colors.red[900],
     scaffoldBackgroundColor: const Color(0xFF121212),
-    appBarTheme: AppBarTheme(
-      backgroundColor: const Color.fromARGB(255, 106, 13, 13),
-      foregroundColor: const Color.fromARGB(255, 155, 155, 155),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color.fromARGB(255, 96, 10, 10),
+      foregroundColor: Colors.grey,  
       elevation: 4,
-      iconTheme: const IconThemeData(color: Color.fromARGB(255, 0, 0, 0)),
+      iconTheme: IconThemeData(color: Colors.black),
     ),
     textTheme: TextTheme(
       displayLarge: GoogleFonts.caveat(
         fontSize: 32,
         fontWeight: FontWeight.bold,
-        color: Colors.white,  
+        color: Colors.white,
       ),
       bodyLarge: GoogleFonts.sourceCodePro(
         fontSize: 18,
-        color: Colors.white,  
+        color: Colors.white,
         fontStyle: FontStyle.italic,
       ),
     ),
@@ -59,11 +59,12 @@ class AppThemes {
   );
 }
 
+// Notifier para manejar el cambio de tema
 class ThemeNotifier extends ValueNotifier<ThemeMode> {
   ThemeNotifier() : super(ThemeMode.light);
 
   void toggleTheme() {
-    value = value == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+    value = (value == ThemeMode.light) ? ThemeMode.dark : ThemeMode.light;
   }
 
   bool get isDarkMode => value == ThemeMode.dark;
