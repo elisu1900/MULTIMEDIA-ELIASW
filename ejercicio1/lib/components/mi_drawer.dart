@@ -182,13 +182,24 @@ class MiDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading:  Icon(Icons.videogame_asset),
+            leading:  Icon(Icons.videogame_asset_off),
             title:  Text("Juego del numero"),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(
                 context,
                 AppRoutes.pantalla14,
+              );
+            },
+          ),
+          ListTile(
+            leading:  Icon(Icons.telegram),
+            title:  Text("Formularios"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(
+                context,
+                AppRoutes.pantalla15,
               );
             },
           ),
